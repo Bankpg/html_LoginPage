@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <span>Please enter your details to sign up.</span>
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm password">
+                <button>Sign Up</button>
+                <span> or </span>
+                <div class="list-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Welcome back</h1>
+                <span></span>
+                <input type="email" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <span><a href="">Forgot Password?</a></span>
+                <button>Sign In</button>
+                <span>or</span>
+                <div class="list-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+        </div>
+        
+        <div class="more-container">
+                <div class="box box-signin">
+                    <h1><i class="fa-solid fa-user-check"></i></h1>
+                    <p>Already have an account?</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="box box-signup">
+                    <h1><i class="fa-regular fa-id-card"></i></h1>
+                    <p>Don't have an account?</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+        });
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+        });
+    </script>
+</body>
+
+</html>

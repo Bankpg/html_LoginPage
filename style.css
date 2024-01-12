@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff, rgba(72, 145, 255, 0.522));
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    min-height: 500px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 5px 15px black;
+}
+
+.container span{
+    font-size: 12px;
+    margin: 15px 0;
+}
+
+.container .icon{
+    font-size: 20px;
+}
+
+.list-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.container p{
+    padding: 20px 0;
+}
+
+.container button{
+    color: white;
+    background-color: #0073ff;
+    font-size: 12px;
+    padding: 10px 60px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: white;
+    border-radius: 100px;
+}
+
+.container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px;
+    height: 100%;
+}
+
+.container input{
+    margin: 5px 0px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 80%;
+    background-color: #eee;
+    border: none;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    height: 100%;
+    transition: all 0.8s ease-out;
+    min-width: 100px;
+}
+
+.sign-in{
+    left: 0;
+    width: 70%;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.sign-up{
+    right: 70%;
+    width: 70%;
+    opacity: 0;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.more-container{
+    background: linear-gradient(to right, #4395ff, #003dd8);
+    color: #fff;
+    position: absolute;
+    right: 0%;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+    border-radius: 100px 20px 20px 100px;
+    box-shadow: -30px 0px 1px rgba(0, 0, 0, 0.1) ;
+    z-index: 1000; 
+
+}
+
+.container.active .more-container{
+    transform: translateX(-235%);
+    border-radius: 20px 100px 100px 20px;
+    box-shadow: 30px 0px 1px rgba(0, 0, 0, 0.1) ;
+    transition: all 0.8s ease-in-out;
+}
+
+.box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.8s ease-in-out;
+}
+
+.box-signin{
+    transform: translateX(100%);
+}
+
+.container.active .box-signin{
+    transform: translateX(0%);
+}
+
+.box-signup{
+    transform: translateX(0%);
+}
+
+.container.active .box-signup{
+    transform: translateX(-100%);
+}
